@@ -1,6 +1,10 @@
 # Release Notes
 
-## [Unreleased](https://github.com/laravel/cashier/compare/v15.3.1...15.x)
+## [Unreleased](https://github.com/laravel/cashier/compare/v15.3.2...15.x)
+
+## [v15.3.2](https://github.com/laravel/cashier/compare/v15.3.1...v15.3.2) - 2024-04-12
+
+* Replace unpkg with jsdelivr by [@driesvints](https://github.com/driesvints) in https://github.com/laravel/cashier-stripe/pull/1669
 
 ## [v15.3.1](https://github.com/laravel/cashier/compare/v15.3.0...v15.3.1) - 2024-03-26
 
