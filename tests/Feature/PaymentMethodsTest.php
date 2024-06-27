@@ -95,6 +95,7 @@ class PaymentMethodsTest extends FeatureTestCase
         $this->assertCount(1, $user->paymentMethods());
         $this->assertTrue($user->hasPaymentMethod());
         $this->assertTrue($user->hasDefaultPaymentMethod());
+        $this->assertTrue($user->hasValidDefaultPaymentMethod());
 
         $user->deletePaymentMethod($paymentMethod->asStripePaymentMethod());
 
@@ -104,6 +105,7 @@ class PaymentMethodsTest extends FeatureTestCase
         $this->assertNull($user->pm_last_four);
         $this->assertFalse($user->hasPaymentMethod());
         $this->assertFalse($user->hasDefaultPaymentMethod());
+        $this->assertFalse($user->hasValidDefaultPaymentMethod());
     }
 
     public function test_we_can_set_a_default_payment_method()
@@ -117,6 +119,7 @@ class PaymentMethodsTest extends FeatureTestCase
         $this->assertEquals('visa', $paymentMethod->card->brand);
         $this->assertEquals('4242', $paymentMethod->card->last4);
         $this->assertTrue($user->hasDefaultPaymentMethod());
+        $this->assertTrue($user->hasValidDefaultPaymentMethod());
 
         $paymentMethod = $user->defaultPaymentMethod();
 
